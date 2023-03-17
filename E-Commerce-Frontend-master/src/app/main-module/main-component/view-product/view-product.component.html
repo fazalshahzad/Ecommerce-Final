@@ -1,0 +1,114 @@
+<div class="banner">
+    <div class="content">
+        <h3>View Products</h3>
+    </div>
+</div>
+<!-------------------------------------------------------------------- view-product  -->
+<div class="container"  id="page">
+    <div class="row">
+
+        <div class="col-md-4 my-3">
+            <div class="gallery" *ngFor="let images of getAllDataWithOwnId?.ProductImages">
+                <input type="radio" checked="checked" name="select" [id]="url+images?._id">
+                <label class="inline" [for]="url+images?._id"
+                    [ngStyle]="{ 'background-image': 'url(' + url+images?.ProductImageUrl + ')'}"></label>
+                <img [src]="url+images?.ProductImageUrl">
+
+
+         </div>
+    </div>
+        <div class="col-md-8 d-flex justify-content-center">
+            <div class="content">
+                <h1>{{getAllDataWithOwnId?.productName}}</h1>
+                <hr>
+
+                <h2 class="text-danger">{{getAllDataWithOwnId?.price|currency}}</h2>
+                <p>{{getAllDataWithOwnId?.description}}</p>
+                <hr>
+                <div class="wrapper1">
+                    <span>Total-Quantity</span>
+                    <ul class="ul">
+                        <li>
+                            {{getAllDataWithOwnId?.quantity}}
+                        </li>
+                    </ul>
+                    <span>Please Select Size</span>
+                    <div class="d-flex justify-content-center">
+                        <div class="cat action" *ngFor="let data of getAllDataWithOwnId.size">
+                            <label class="">
+                                <input type="checkbox" [value]="data" (click)="getSizes($event)"><span>{{data}}</span>
+                            </label>
+                        </div>
+                    </div>
+                    <span>Add-Quantity</span>
+                    <div class="quantity-wrapper1 my-2">
+                        <button class="button" (click)="decreaseQuantity()">-</button>
+                        {{selectedQuantity}}
+                        <button class="button" (click)="increaseQuantity()">+</button>
+                    </div>
+                    <button class="button" type="button" class="btn btn1 d-flex justify-content-center"
+                        data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling"
+                        aria-controls="offcanvasScrolling" (click)="AddToCart()">Add To Cart</button>
+                    <button class="button" type="button" class="btn btn1 d-flex justify-content-center"
+                        data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling"
+                        aria-controls="offcanvasScrolling" (click)="viewCart()">View-Cart</button>
+                </div>
+                <hr>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="fontAwesome">
+                                <i class="fa-sharp fa-solid fa-handshake"></i>
+                                <span>24/7 Gurantee</span>
+                                <div>Support-Gurantee</div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="fontAwesome">
+                                <i class="fa-solid fa-shield-halved"></i>
+                                <span>60-Days-Protection</span>
+                                <div>Money Back Gurantee</div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="fontAwesome">
+                                <i class="fa-sharp fa-solid fa-money-check-dollar"></i>
+                                <span>Easy-Payment</span>
+                                <div>Debit/Credit Card</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+<!--------------------------------------- Off-Canvas  -->
+
+    <div class="offcanvas offcanvas-end black text-white" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+        id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Product-Details</h5>
+            <h4><i class="fa-sharp fa-solid fa-xmark text-white" role="button" data-bs-dismiss="offcanvas"
+                aria-label="Close"></i></h4>
+        </div>
+        <hr>
+        <div class="offcanvas-body">
+                      <div *ngFor="let data of cart">
+                <div class="mb-3">
+                    <div class="fa-sharp1">
+                        <i class="fa-sharp fa-solid fa-square-xmark" (click)="deleteCanvasProduct(data.productID)"></i>
+                    </div>
+                    <img [src]="url+data?.imageUrl"
+            [alt]="data?.productName" class="img-thumbnail rounded-0 border border-danger">
+            <div class="quantity-wrapper1 my-2 ms-2">
+                <button class="button text-white" (click)="decreaseQuantityCanvas(data.productID)">-</button>
+                {{data.selectedQuantity}}
+                <button class="button text-white" (click)="increaseQuantityCanvas(data.productID)">+</button>
+                </div>
+            </div>
+        </div>
+    </div>

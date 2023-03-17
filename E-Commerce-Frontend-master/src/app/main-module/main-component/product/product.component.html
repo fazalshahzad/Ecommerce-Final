@@ -1,0 +1,103 @@
+<section id="hero">
+  <h2>#StayHome</h2>
+  <p>Save more with coupons & up to 70% off!</p>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="col-xl-9">
+  <div class="container">
+
+      <div class="row">
+          <div class="col-lg-4 col-md-6 d-flex justify-content-center" *ngFor="let item of ProductArray | paginate: { itemsPerPage: 9, currentPage: p }">
+              <div class="wrapper" *ngIf="productView === true">
+
+
+
+
+                <section id="product1" class="section-p1">
+
+
+                  <div class="pro-container">
+                      <div class="pro"  (click)="reDirectSingleProductPage(item._id)">
+                          <img [src]="Url+item.ProductImages[0].ProductImageUrl" alt="">
+                  <div class="des">
+                  <span>{{item.productName}}</span>
+                  <h5>{{item.description}}</h5>
+                  <div class="star">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+
+                  </div>
+                  <h4> ${{item.price}} </h4>
+                  </div>
+                  <a href="#" ><i id="cart" class="fa-solid fa-cart-shopping"   ></i></a>
+
+
+                      </div>
+                  </div>
+
+
+                  </section>
+
+
+
+
+                  </div>
+                  </div>
+
+
+
+
+
+                  <div class="mt-5 text-center">
+                    <pagination-controls class="my-pagination" (pageChange)="p = $event"></pagination-controls>
+                </div>
+
+
+<!--
+                  <section id="product1" class="section-p1" *ngFor="let item of ProductArray | paginate: { itemsPerPage: 9, currentPage: p }">
+                    <div class="wrapper" *ngIf="productView === true">
+
+                    <div class="pro-container" *ngIf="productView === true">
+                      <div class="pro"  (click)="reDirectSingleProductPage(item._id)">
+                        <img [src]="Url+item.ProductImages[0].ProductImageUrl" alt="">
+                <div class="des">
+                <span>{{item.productName}}</span>
+                <h5>{{item.description}}</h5>
+                <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+
+                </div>
+                <h4> ${{item.price}} </h4>
+                </div>
+                    <a><i class="fal fa-shopping-cart cart"></i></a>
+
+                        </div>
+                        </div> -->
+
+
+
+

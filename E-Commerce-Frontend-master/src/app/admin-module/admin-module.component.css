@@ -1,0 +1,53 @@
+
+body{
+    font-family: poppins;
+}
+app-admin-dashboard-header{
+    position: fixed;
+    top: 0px;
+    height: 4rem;
+    z-index: 1052;
+    width: 100%;
+}
+main{
+    position: absolute;
+    top: 4rem;
+    width: 100%;
+    z-index:1051;
+}
+app-admin-sidebar{
+    border: 1px solid rgb(157, 11, 11);
+    position: fixed;
+    margin-top: -8px;
+    left: 0rem;
+    width: 57px;
+    height: 100vh;
+    /* box-shadow: 8px 0px 10px rgba(0, 0, 0, 0.5); */
+    background-color: rgb(157, 11, 11);
+    overflow-x: hidden;
+    white-space: nowrap;
+    transition: width 250ms ease-in;
+}
+.app-side-nav-open{
+    width: 250px;
+}
+.display-area{
+    position: absolute;
+    z-index: 1051;
+    left: 57px;
+    width: calc(100% - 57px);
+    transition: left 250ms ease-in, width 250ms ease-in;
+}
+.display-shrink-area{
+    width: calc(100% - 250px);
+     left: 250px;
+}
+@media (max-width : 776px) {
+    .app-side-nav-open{
+        width: 57px;
+    }
+    .display-shrink-area{
+        width: calc(100% - 57px);
+        left: 57px;
+    }
+}

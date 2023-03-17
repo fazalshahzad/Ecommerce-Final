@@ -1,0 +1,722 @@
+.banner::before {
+    content: " ";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    background-color: rgba(176, 49, 49, 0.54);
+}
+
+.banner {
+    height: 50vh;
+    width: 100%;
+    background-image: url("../../../../assets/sec-1.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+    margin-top: -93px;
+}
+
+.content {
+    z-index: 2;
+}
+
+.content>h3 {
+    padding-top: 11%;
+    margin-left: 40%;
+    color: white;
+    font-size: 61px;
+    font-family: Roboto, HelveticaNeue, Arial, sans-serif;
+    font-weight: bold;
+}
+
+.content>h3::after {
+    content: " ";
+    display: block;
+    height: 4px;
+    width: 32%;
+    background-color: red;
+}
+
+/**************************************************************************** content-responsive  */
+@media (max-width:1199px) {
+    .content>h3 {
+        padding-top: 18%;
+        margin-left: 40%;
+        color: white;
+        font-size: 42px;
+    }
+}
+
+@media (max-width:991px) {
+    .content>h3 {
+        padding-top: 22%;
+        margin-left: 37%;
+        color: white;
+        font-size: 40px;
+    }
+}
+
+@media (max-width:767px) {
+    .content>h3 {
+        padding-top: 28%;
+        margin-left: 35%;
+        color: white;
+        font-size: 37px;
+    }
+}
+
+@media (max-width:567px) {
+    .content>h3 {
+        padding-top: 36%;
+        margin-left: 30%;
+        color: white;
+        font-size: 39px;
+    }
+}
+
+/* ********************************************* image thumbnais */
+.main-Image {
+    height: 45vh;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.image-thumbnails>img {
+    width: 10vh;
+    cursor: pointer;
+    height: 8vh;
+    margin-bottom: 10px;
+}
+
+.content>h1 {
+    font-family: 'Poppins';
+    font-weight: 500;
+}
+
+.content>h2 {
+    font-family: 'Poppins';
+    font-weight: 600;
+}
+
+.wrapper1 {
+    border-left: 4px solid red;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper1>span {
+    font-family: 'Poppins';
+    font-weight: 600;
+    display: block;
+}
+
+.wrapper1>ul {
+    list-style-type: none;
+    border: 1px solid red;
+    display: inline-block;
+    text-align: center;
+    width: 46px;
+    margin-left: 0px;
+    margin-top: 9px;
+    padding-left: 0px;
+}
+
+.wrapper1>ul:hover {
+    background-color: #f3f3f3;
+}
+
+.quantity-wrapper1 {
+    display: inline-block;
+}
+
+.quantity-wrapper1>span {
+    border: 1px solid red;
+    padding: 3px 15px 3px 15px;
+}
+
+.quantity-wrapper1>span:hover {
+    cursor: pointer;
+    background-color: #f3f3f3;
+}
+
+.button {
+    width: 37px;
+    border: 1px solid red;
+    border-radius: 0px;
+    background-color: #ffffff00;
+}
+
+.btn1 {
+    margin-left: 0px;
+    margin-top: 12px;
+    display: block;
+    border-radius: 0%;
+    border: 1px solid red;
+    font-family: poppins;
+    background-color: red;
+    color: white;
+}
+
+.fontAwesome {
+    font-size: 20px;
+}
+
+.fontAwesome>span {
+    font-size: 15px;
+    margin-left: 10px;
+    font-family: poppins;
+}
+
+.fontAwesome>div {
+    font-size: 13px;
+    margin-left: 33px;
+    font-family: poppins;
+    color: #282727;
+    margin-top: -5px;
+}
+
+/*------------------------>> .button <<---------------------------------*/
+.btn {
+    background: rgb(255, 255, 255);
+    color: rgb(255, 0, 0);
+    border-radius: 0%;
+    border-color: red;
+    width: 128px;
+}
+
+.btn:hover {
+    background: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
+    border-radius: 0%;
+}
+
+.btn:focus {
+    box-shadow: none;
+}
+
+
+/*********************************************card 2 */
+.fa-cart-shopping {
+    margin-left: 94px;
+    font-size: 21px;
+    cursor: pointer;
+}
+
+.fa-cart-shopping:hover {
+
+    color: #fff !important;
+    text-shadow:
+        0 0 6px #ff0101,
+        0 0 6px #ff0101,
+        0 0 6px #ff0101,
+        0 0 6px #ff0101,
+        0 0 6px #ff0101,
+        0 0 6px #ff0101;
+
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+
+
+/******************************************************************************************************** Product-view  */
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+    grid-column-start: 1;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    align-content: start;
+    max-width: 700px;
+    margin: 0 auto;
+    transition: all 150ms linear;
+}
+
+.gallery input[type="radio"] {
+    display: none;
+}
+
+.gallery label {
+    position: relative;
+    display: block;
+    padding-bottom: 60%;
+    margin: 5px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.gallery label:before {
+    border: 1px solid #e3e3e3;
+    content: '';
+    position: absolute;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    top: -5px;
+}
+
+.gallery img {
+    display: none;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    width: 100%;
+    transition: all 150ms linear;
+    height: 45vh;
+}
+
+.gallery input[name="select"]:checked+label+img {
+    display: inline-block;
+}
+
+.gallery input[name="select"]:checked+label:before {
+    border: 1px solid #000;
+}
+
+/************************************************ Checked-.button  ******************/
+
+.cat {
+    margin: 4px;
+    background-color: transparent;
+    border-radius: 0px;
+    border: 1px solid rgb(0, 0, 0);
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.cat label {
+    width: 3em;
+}
+
+.cat label span {
+    text-align: center;
+    padding: 3px 0;
+    display: block;
+    cursor: pointer;
+}
+
+.cat label input {
+    position: absolute;
+    display: none;
+    color: black !important;
+    cursor: pointer;
+}
+
+/* selects all of the text within the input element and changes the color of the text */
+.cat label input+span {
+    color: black;
+}
+
+
+/* This will declare how a selected input will look giving generic properties */
+.cat input:checked+span {
+    color: #ffffff !important;
+    text-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
+}
+
+
+/*
+  This following statements selects each category individually that contains an input element that is a checkbox and is checked (or selected) and chabges the background color of the span element.
+  */
+
+.action input:checked+span {
+    background-color: rgb(0, 0, 0);
+}
+
+;
+
+/*************************************** Off-Canvas  */
+.black {
+    background-color: rgba(0, 0, 0, 0.815) !important;
+}
+
+.offcanvas {
+    background-color: rgba(0, 0, 0, 0.781) !important;
+}
+
+.img-thumbnail {
+    height: 122px;
+    width: 130px;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.fa-sharp1 {
+    margin-left: 135px;
+    margin-top: -4px;
+    position: absolute;
+    cursor: pointer;
+}
+.fa-square-xmark{
+    color: #f5d142;
+}
+.fa-square-xmark:hover{
+    color: #ecc00f;
+}
+
+
+
+
+
+
+
+.banner::before {
+  content: " ";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  background-color: rgba(176, 49, 49, 0.54);
+}
+
+.banner {
+  height: 50vh;
+  width: 100%;
+  background-image: url("../../../../assets/sec-1.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+  margin-top: -93px;
+}
+
+.content {
+  z-index: 2;
+}
+
+.content>h3 {
+  padding-top: 11%;
+  margin-left: 40%;
+  color: white;
+  font-size: 61px;
+  font-family: Roboto, HelveticaNeue, Arial, sans-serif;
+  font-weight: bold;
+}
+
+.content>h3::after {
+  content: " ";
+  display: block;
+  height: 4px;
+  width: 32%;
+  background-color: red;
+}
+
+/**************************************************************************** content-responsive  */
+@media (max-width:1199px) {
+  .content>h3 {
+      padding-top: 18%;
+      margin-left: 40%;
+      color: white;
+      font-size: 42px;
+  }
+}
+
+@media (max-width:991px) {
+  .content>h3 {
+      padding-top: 22%;
+      margin-left: 37%;
+      color: white;
+      font-size: 40px;
+  }
+}
+
+@media (max-width:767px) {
+  .content>h3 {
+      padding-top: 28%;
+      margin-left: 35%;
+      color: white;
+      font-size: 37px;
+  }
+}
+
+@media (max-width:567px) {
+  .content>h3 {
+      padding-top: 36%;
+      margin-left: 30%;
+      color: white;
+      font-size: 39px;
+  }
+}
+
+/* ********************************************* image thumbnais */
+.main-Image {
+  height: 45vh;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.image-thumbnails>img {
+  width: 10vh;
+  cursor: pointer;
+  height: 8vh;
+  margin-bottom: 10px;
+}
+
+.content>h1 {
+  font-family: 'Poppins';
+  font-weight: 500;
+}
+
+.content>h2 {
+  font-family: 'Poppins';
+  font-weight: 600;
+}
+
+.wrapper1 {
+  border-left: 4px solid red;
+  padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper1>span {
+  font-family: 'Poppins';
+  font-weight: 600;
+  display: block;
+}
+
+.wrapper1>ul {
+  list-style-type: none;
+  border: 1px solid red;
+  display: inline-block;
+  text-align: center;
+  width: 46px;
+  margin-left: 0px;
+  margin-top: 9px;
+  padding-left: 0px;
+}
+
+.wrapper1>ul:hover {
+  background-color: #f3f3f3;
+}
+
+.quantity-wrapper1 {
+  display: inline-block;
+}
+
+.quantity-wrapper1>span {
+  border: 1px solid red;
+  padding: 3px 15px 3px 15px;
+}
+
+.quantity-wrapper1>span:hover {
+  cursor: pointer;
+  background-color: #f3f3f3;
+}
+
+.btn1 {
+  margin-left: 0px;
+  margin-top: 12px;
+  display: block;
+  border-radius: 0%;
+  border: 1px solid red;
+  font-family: poppins;
+  background-color: red;
+  color: white;
+}
+
+.fontAwesome {
+  font-size: 20px;
+}
+
+.fontAwesome>span {
+  font-size: 15px;
+  margin-left: 10px;
+  font-family: poppins;
+}
+
+.fontAwesome>div {
+  font-size: 13px;
+  margin-left: 33px;
+  font-family: poppins;
+  color: #282727;
+  margin-top: -5px;
+}
+/*------------------------>> Button <<---------------------------------*/
+.btn{
+  background: rgb(255, 255, 255);
+  color: rgb(255, 0, 0);
+  border-radius: 0%;
+  border-color: red;
+}
+.btn:hover{
+  background: rgb(255, 0, 0);
+  color: rgb(255, 255, 255);
+  border-radius: 0%;
+}
+.btn:focus{
+  box-shadow: none;
+}
+
+
+/*********************************************card 2 */
+.fa-cart-shopping{
+  margin-left: 94px;
+  font-size: 21px;
+  cursor: pointer;
+}
+.fa-cart-shopping:hover{
+
+  color: #fff !important;
+  text-shadow:
+  0 0 6px #ff0101	,
+  0 0 6px #ff0101	,
+  0 0 6px #ff0101	,
+  0 0 6px #ff0101	,
+  0 0 6px #ff0101	,
+  0 0 6px #ff0101	;
+
+    -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+.red{
+  color: red;
+};
+.pointer{
+  cursor: pointer;
+}
+/**************************************************************** Quality Card */
+.card1{
+  width: 100%;
+}
+.card1>img{
+  width: 16%;
+}
+.card1 {
+  margin-top: 45px;
+  overflow: hidden;
+}
+
+.img1 {
+  max-width: 100%;
+  height: 112%;
+}
+
+.img1 {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.card-title1 {
+  position: absolute;
+  background-color: red;
+  color: white;
+  width: 70px;
+  margin-left: -164px;
+  margin-top: -9px;
+  text-align: center;
+}
+
+/******************************** Card-Responsive  */
+@media (max-width: 1199px) {
+  /* .side-area{
+     display: none;
+  } */
+
+  /* }
+@media (max-width: 767px){
+  .card{
+      margin-left: 107px;
+  }
+}
+@media (max-width: 567){
+  .card{
+      margin-left: 113px;
+
+} */
+}
+
+/******************************** Card-Responsive  */
+@media (max-width: 767px) {
+  .img1 {
+      width: 100%;
+      height: 100%;
+  }
+}
+/******************************************************************************************************** Product-view  */
+.gallery {
+width: 40px;
+min-width: 250px;
+padding: 10px 12px;
+border: 1px solid #cce7d0;
+border-radius: 25px;
+cursor: pointer;
+box-shadow: 20px 20px 30px rgba(0,0,0,0.02);
+margin: 15px 0;
+transition: 0.2s ease;
+position: relative;
+height: 60vh;
+
+}
+.gallery:hover{
+  box-shadow: 20px 20px 30px rgba(0,0,0.06);
+
+}
+
+.gallery input[type="radio"] {
+  display: none;
+}
+
+/* .gallery label {
+  position: relative;
+  display: block;
+  padding-bottom: 60%;
+  margin: 5px;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+} */
+
+.gallery label:before {
+  border: 1px solid #e3e3e3;
+  content: '';
+  position: absolute;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  top: -5px;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 20px;
+  height: 50vh;
+
+}
+
+.gallery input[name="select"]:checked + label + img {
+  display: inline-block;
+}
+
+.gallery input[name="select"]:checked + label:before {
+  border: none;
+}
+/* .inline{
+   display: inline-block !important ;
+} */
+
+
+
+#page{
+  padding: 0px 0px 90px 0px;
+}
+
+

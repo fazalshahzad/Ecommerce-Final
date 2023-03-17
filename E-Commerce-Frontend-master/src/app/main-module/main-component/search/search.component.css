@@ -1,0 +1,22 @@
+
+.search-container {
+  position: relative;
+}
+
+.search-container i {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: #aaa;
+  cursor: pointer;
+}
+
+.search-container input[type="text"] {
+  padding: 5px 50px 12px 60px;
+  width: 100%;
+  border: 0.5px solid black;
+  border-radius: 40px;
+  background-color: #f1f1f1;
+}

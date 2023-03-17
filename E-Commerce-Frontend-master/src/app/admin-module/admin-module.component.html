@@ -1,0 +1,20 @@
+<div class="container-fluid g-0">
+  <app-admin-dashboard-header (navToggle)="sideStatus = $event"></app-admin-dashboard-header>
+
+  <main>
+      <app-admin-sidebar [sideNavStatus]="sideStatus" [ngClass]="{'app-side-nav-open' : sideStatus}"></app-admin-sidebar>
+
+      <div class="display-area p-3" [ngClass]="{'display-shrink-area':sideStatus}" >
+          <router-outlet></router-outlet>
+         
+      </div>
+  </main>
+</div>
+
+
+  
+  
+
+
+
+

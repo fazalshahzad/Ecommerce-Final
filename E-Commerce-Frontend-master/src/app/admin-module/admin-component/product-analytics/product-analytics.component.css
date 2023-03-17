@@ -1,0 +1,21 @@
+@import url('../dashboard/dashboard.component.css');
+.tableHead{
+   background-color: rgb(173, 16, 16);
+}
+.btn{
+    border-radius: 0%;
+}
+.cardImage{
+    height: 27vh;
+}
+.tableBox{
+    border-radius: 10px;
+    border: none;
+    box-shadow: 2px 2px 20px 2px rgb(232, 232, 232);
+}
+.btn-box{
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 2px 2px 20px 2px rgb(232, 232, 232);
+}
+ 
